@@ -43,6 +43,8 @@ Se probaron tres criterios de **Linkage** utilizando clustering jerárquico aglo
 | **Ward**     | **0.7518** |
 | **Complete** | **0.7518** |
 | Average      |     0.7494 |
+<img width="1589" height="390" alt="image" src="https://github.com/user-attachments/assets/d6166fed-824a-48c2-a368-cd3ac03ca2d7" />
+
 
 ### Analisis
 
@@ -65,9 +67,14 @@ Se evaluaron diferentes cantidades de segmentos:
 |         7 |     0.4550 |
 |         8 |     0.4322 |
 
+<img width="1182" height="384" alt="image" src="https://github.com/user-attachments/assets/584a244b-36ec-4b2e-9f4c-2eea980f4d2a" />
+
+
 ### Analisis
 
 El mejor resultado se obtuvo utilizando **3 segmentos**, con un coeficiente **Silhouette de 0.5747**. Al aumentar el número de segmentos, el valor de Silhouette disminuyó progresivamente, indicando una menor separación entre los grupos de píxeles.
+
+<img width="934" height="427" alt="image" src="https://github.com/user-attachments/assets/18987d07-f0c4-414f-aca4-787a4b369e54" />
 
 Por ello, para esta imagen, la configuración seleccionada fue:
 
