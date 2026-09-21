@@ -44,9 +44,36 @@ Se probaron tres criterios de **Linkage** utilizando clustering jerárquico aglo
 | **Complete** | **0.7518** |
 | Average      |     0.7494 |
 
-### Hallazgos
+### Analisis
 
 Los criterios **Ward y Complete** obtuvieron el valor más alto de Silhouette (**0.7518**), mientras que Average obtuvo **0.7494**. Los tres resultados son similares y muestran una **buena separación y cohesión de los segmentos**.
 
 En este conjunto de datos sintético, Ward y Complete produjeron la mejor separación según Silhouette, aunque la diferencia con Average fue pequeña.
 
+## C. Segmentación de imágenes con Clustering Jerárquico
+
+Se utilizó una imagen de ejemplo de **scikit-learn**, reducida a **60×60 píxeles**. Cada píxel fue representado mediante sus valores **RGB** y se aplicó clustering jerárquico con enlace **Complete**.
+
+Se evaluaron diferentes cantidades de segmentos:
+
+| Segmentos | Silhouette |
+| --------: | ---------: |
+|         3 | **0.5747** |
+|         4 |     0.5386 |
+|         5 |     0.5040 |
+|         6 |     0.4607 |
+|         7 |     0.4550 |
+|         8 |     0.4322 |
+
+### Analisis
+
+El mejor resultado se obtuvo utilizando **3 segmentos**, con un coeficiente **Silhouette de 0.5747**. Al aumentar el número de segmentos, el valor de Silhouette disminuyó progresivamente, indicando una menor separación entre los grupos de píxeles.
+
+Por ello, para esta imagen, la configuración seleccionada fue:
+
+* **Método:** Clustering jerárquico
+* **Linkage:** Complete
+* **Número de segmentos:** 3
+* **Silhouette:** 0.5747
+
+La segmentación permite dividir la imagen en regiones según la similitud de los colores RGB de sus píxeles.
